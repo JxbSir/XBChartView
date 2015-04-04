@@ -1,14 +1,15 @@
 //
-//  PSSSummaryChartCell.m
+//  XBChartCell.m
 //  PSS
 //
 //  Created by Peter on 15/4/3.
 //  Copyright (c) 2015年 Peter. All rights reserved.
 //
 
-#import "PSSSummaryChartCell.h"
+#import "XBChartCell.h"
+#import "UIColor+hexColor.h"
 
-@interface PSSSummaryChartCell()
+@interface XBChartCell()
 {
     CAShapeLayer     *chartShip;
     CAShapeLayer     *chartOrder;
@@ -18,7 +19,7 @@
 
 @end
 
-@implementation PSSSummaryChartCell
+@implementation XBChartCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -44,14 +45,13 @@
         lblTitle.textColor = [UIColor grayColor];
         lblTitle.font = [UIFont systemFontOfSize:13];
         lblTitle.transform = CGAffineTransformMakeRotation(-M_PI / 2);
-        lblTitle.text = @"3/31";
         [self addSubview:lblTitle];
     }
     return self;
 }
 
 
-- (void)setChartValue:(CGFloat)basic item:(PSSSummaryCellModel*)item
+- (void)setChartValue:(CGFloat)basic item:(XBChartCellModel*)item
 {
     CGFloat basicWidth  = chartViewWidth - 45;
     
@@ -61,6 +61,7 @@
 
     chartSale.path = [UIBezierPath bezierPathWithRect:CGRectMake(chartViewWidth - basicWidth * (item.numOfSale / basic) - chartCellTitleHeight, 0, basicWidth * (item.numOfSale / basic), chartCellHeight / 3)].CGPath;
     
+    lblTitle.text = item.title;
 }
 
 @end

@@ -1,5 +1,5 @@
 //
-//  PSSSummaryCellModel.h
+//  XBChartCellModel.h
 //  PSS
 //
 //  Created by Peter on 15/4/4.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface PSSSummaryCellModel : NSObject
+@interface XBChartCellModel : NSObject
 @property(nonatomic,assign)double   numOfShip;
 @property(nonatomic,assign)double   numOfOrder;
 @property(nonatomic,assign)double   numOfSale;

@@ -14,6 +14,10 @@
 		D0A25B9B1ACFD80800CFA24E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0A25B9A1ACFD80800CFA24E /* Images.xcassets */; };
 		D0A25B9E1ACFD80800CFA24E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0A25B9C1ACFD80800CFA24E /* LaunchScreen.xib */; };
 		D0A25BAA1ACFD80800CFA24E /* XBChartViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A25BA91ACFD80800CFA24E /* XBChartViewTests.m */; };
+		D0A25BBC1ACFD82900CFA24E /* XBChartCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A25BB61ACFD82900CFA24E /* XBChartCellModel.m */; };
+		D0A25BBD1ACFD82900CFA24E /* XBChartCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A25BB91ACFD82900CFA24E /* XBChartCell.m */; };
+		D0A25BBE1ACFD82900CFA24E /* XBChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A25BBB1ACFD82900CFA24E /* XBChartView.m */; };
+		D0A25BC21ACFD91A00CFA24E /* UIColor+hexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A25BC11ACFD91A00CFA24E /* UIColor+hexColor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,14 @@
 		D0A25BA31ACFD80800CFA24E /* XBChartViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XBChartViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0A25BA81ACFD80800CFA24E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0A25BA91ACFD80800CFA24E /* XBChartViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBChartViewTests.m; sourceTree = "<group>"; };
+		D0A25BB51ACFD82900CFA24E /* XBChartCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBChartCellModel.h; sourceTree = "<group>"; };
+		D0A25BB61ACFD82900CFA24E /* XBChartCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBChartCellModel.m; sourceTree = "<group>"; };
+		D0A25BB81ACFD82900CFA24E /* XBChartCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBChartCell.h; sourceTree = "<group>"; };
+		D0A25BB91ACFD82900CFA24E /* XBChartCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBChartCell.m; sourceTree = "<group>"; };
+		D0A25BBA1ACFD82900CFA24E /* XBChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBChartView.h; sourceTree = "<group>"; };
+		D0A25BBB1ACFD82900CFA24E /* XBChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBChartView.m; sourceTree = "<group>"; };
+		D0A25BC01ACFD91A00CFA24E /* UIColor+hexColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+hexColor.h"; path = "Category/UIColor+hexColor.h"; sourceTree = "<group>"; };
+		D0A25BC11ACFD91A00CFA24E /* UIColor+hexColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+hexColor.m"; path = "Category/UIColor+hexColor.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +93,7 @@
 		D0A25B8C1ACFD80800CFA24E /* XBChartView */ = {
 			isa = PBXGroup;
 			children = (
+				D0A25BB31ACFD82900CFA24E /* XBChartView */,
 				D0A25B911ACFD80800CFA24E /* AppDelegate.h */,
 				D0A25B921ACFD80800CFA24E /* AppDelegate.m */,
 				D0A25B941ACFD80800CFA24E /* ViewController.h */,
@@ -117,6 +130,45 @@
 				D0A25BA81ACFD80800CFA24E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D0A25BB31ACFD82900CFA24E /* XBChartView */ = {
+			isa = PBXGroup;
+			children = (
+				D0A25BBF1ACFD8FC00CFA24E /* Category */,
+				D0A25BB41ACFD82900CFA24E /* Model */,
+				D0A25BB71ACFD82900CFA24E /* View */,
+			);
+			path = XBChartView;
+			sourceTree = "<group>";
+		};
+		D0A25BB41ACFD82900CFA24E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D0A25BB51ACFD82900CFA24E /* XBChartCellModel.h */,
+				D0A25BB61ACFD82900CFA24E /* XBChartCellModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D0A25BB71ACFD82900CFA24E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D0A25BB81ACFD82900CFA24E /* XBChartCell.h */,
+				D0A25BB91ACFD82900CFA24E /* XBChartCell.m */,
+				D0A25BBA1ACFD82900CFA24E /* XBChartView.h */,
+				D0A25BBB1ACFD82900CFA24E /* XBChartView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D0A25BBF1ACFD8FC00CFA24E /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				D0A25BC01ACFD91A00CFA24E /* UIColor+hexColor.h */,
+				D0A25BC11ACFD91A00CFA24E /* UIColor+hexColor.m */,
+			);
+			name = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,9 +271,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0A25BC21ACFD91A00CFA24E /* UIColor+hexColor.m in Sources */,
 				D0A25B961ACFD80800CFA24E /* ViewController.m in Sources */,
+				D0A25BBE1ACFD82900CFA24E /* XBChartView.m in Sources */,
+				D0A25BBC1ACFD82900CFA24E /* XBChartCellModel.m in Sources */,
 				D0A25B931ACFD80800CFA24E /* AppDelegate.m in Sources */,
 				D0A25B901ACFD80800CFA24E /* main.m in Sources */,
+				D0A25BBD1ACFD82900CFA24E /* XBChartCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

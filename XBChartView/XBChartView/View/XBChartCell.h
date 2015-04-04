@@ -1,5 +1,5 @@
 //
-//  PSSSummaryChartCell.h
+//  XBChartCell.h
 //  PSS
 //
 //  Created by Peter on 15/4/3.
@@ -7,14 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PSSSummaryCellModel.h"
+#import "XBChartCellModel.h"
 
 #define chartCellTitleHeight    20
 #define chartCellHeight         60
 #define chartViewWidth          200
 
 
-@interface PSSSummaryChartCell : UITableViewCell
+@interface XBChartCell : UITableViewCell
 
-- (void)setChartValue:(CGFloat)basic item:(PSSSummaryCellModel*)item;
+- (void)setChartValue:(CGFloat)basic item:(XBChartCellModel*)item;
 @end

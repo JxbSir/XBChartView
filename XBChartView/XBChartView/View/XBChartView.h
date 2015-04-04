@@ -1,5 +1,5 @@
 //
-//  PSSSummaryChartView.h
+//  XBChartView.h
 //  PSS
 //
 //  Created by Peter on 15/4/4.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PSSSummaryChartView : UIView
+@interface XBChartView : UIView
 
 @property(nonatomic,copy)NSArray    *tbDataSource;
 @end

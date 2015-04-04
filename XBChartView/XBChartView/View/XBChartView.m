@@ -1,22 +1,23 @@
 //
-//  PSSSummaryChartView.m
+//  XBChartView.m
 //  PSS
 //
 //  Created by Peter on 15/4/4.
 //  Copyright (c) 2015年 Peter. All rights reserved.
 //
 
-#import "PSSSummaryChartView.h"
-#import "PSSSummaryChartCell.h"
-#import "PSSSummaryCellModel.h"
+#import "XBChartView.h"
+#import "XBChartCell.h"
+#import "XBChartCellModel.h"
+#import "UIColor+hexColor.h"
 
-@interface PSSSummaryChartView ()<UITableViewDataSource,UITableViewDelegate>
+@interface XBChartView ()<UITableViewDataSource,UITableViewDelegate>
 {
     UITableView *tbView;
 }
 @end
 
-@implementation PSSSummaryChartView
+@implementation XBChartView
 
 
 - (id)initWithFrame:(CGRect)frame
@@ -99,7 +100,7 @@
 {
     if(section == 0)
     {
-        CGFloat h = mainWidth / 2 - chartCellHeight / 2;
+        CGFloat h = self.bounds.size.width / 2 - chartCellHeight / 2;
         return h;
     }
     return 5.;
@@ -109,7 +110,7 @@
 {
     if(section == _tbDataSource.count - 1)
     {
-        CGFloat h = mainWidth / 2 - chartCellHeight / 2;
+        CGFloat h = self.bounds.size.width / 2 - chartCellHeight / 2;
         return h;
     }
     return 5;
@@ -136,17 +137,13 @@
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString* identyfier = @"psssummaryCell";
-    PSSSummaryChartCell* cell = [tableView dequeueReusableCellWithIdentifier:identyfier];
+    NSString* identyfier = @"xbChartCell";
+    XBChartCell* cell = [tableView dequeueReusableCellWithIdentifier:identyfier];
     if(!cell)
     {
-        cell = [[PSSSummaryChartCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identyfier];
+        cell = [[XBChartCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identyfier];
     }
-    PSSSummaryCellModel* item = [[PSSSummaryCellModel alloc] init];
-    item.numOfShip = 99;
-    item.numOfOrder = 67;
-    item.numOfSale = 37;
-    item.title = @"3-31";
+    XBChartCellModel* item = [_tbDataSource objectAtIndex:indexPath.section];
     [cell setChartValue:100 item:item];
     return cell;
 }
